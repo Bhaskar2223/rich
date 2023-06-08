@@ -1,0 +1,37 @@
+version: '3'
+services:
+  rich:
+    image: bhaskarone/rich:latest
+    ports:
+      - "80:80"
+    volumes:
+      - "richvol"
+    deploy:
+      replicas: 3
+
+  pitch:
+    image: bhaskarone/pitch:latest
+    ports:
+      - "81:80"
+    volumes:
+      - "pitchvol"
+    deploy:
+      replicas: 3
+
+  poor:
+    image: bhaskarone/poor:latest
+    ports:
+      - "82:80"
+    volumes:
+      - "poorvol"
+    deploy:
+      replicas: 3
+
+  middle:
+    image: bhaskarone/middle:latest
+    ports:
+      - "83:80"
+    volumes:
+      - "middlevol"
+    deploy:
+      replicas: 3
